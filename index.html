@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Criptare Alfabetică</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔐 Criptare Alfabetică (Cheie unică 1–20)</h1>
+
+        <textarea id="inputText" placeholder="Textul de criptat/decriptat..."></textarea>
+
+        <div class="controls">
+            <input type="number" id="key" placeholder="Cheie între 1 și 20" min="1" max="20">
+            <input type="file" id="fileInput" accept=".txt">
+        </div>
+
+        <div class="buttons">
+            <button onclick="codifica()">Codifică</button>
+            <button onclick="decodifica()">Decodifică</button>
+            <button onclick="exportText()">💾 Exportă</button>
+        </div>
+
+        <textarea id="outputText" placeholder="Rezultatul apare aici..." readonly></textarea>
+
+        <div class="explanation">
+            <h3>🧠 Algoritm:</h3>
+            <p>
+                Se criptează doar literele. Alte caractere se păstrează.<br> Se aplică shift în alfabet cu o cheie între 1–20:<br> - Pozițiile pare: +cheie<br> - Pozițiile impare: -cheie<br> Cazul literelor se păstrează.
+            </p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
